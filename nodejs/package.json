@@ -1,0 +1,34 @@
+{
+  "name": "",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "compile": "lessc --clean-css src/content/styles/main.less > src/content/styles/_bundled.css",
+    "start": "node --use-strict src/index.js",
+    "test": "mocha tests/ --recursive --compilers js:babel-core/register",
+    "lint": "eslint tests/ src/"
+  },
+  "author": "Mikael Lofjärd <mikael@lofjard.se>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=5.3.0",
+    "npm": ">=3.5.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.4",
+    "babel-preset-es2015": "^6.6.0",
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.2.0",
+    "eslint": "^2.5.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.2.3",
+    "less": "^1.7.4",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.3"
+  },
+  "dependencies": {
+    "mime": "^1.3.4",
+    "node-static": "^0.7.7",
+    "nunjucks": "^2.4.0"
+  }
+}
